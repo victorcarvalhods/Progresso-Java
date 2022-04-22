@@ -1,0 +1,12 @@
+Usa o StringBuilder no toString. Fazendo assim com que fique mais fácil fazer a conversão dos objetos para string.
+
+Como fazer:
+	Dentro do toString da classe, faça a instanciação de um obj StringBuilder sb = new StringBuilder();
+	
+	depois é só ir fazendo sb.append(atributo_OBJ ou texto ou atributo_OBJ + text).
+	
+	e após terminar é só dar return sb.toString();
+	
+	***Lembrar que quebras de linhas precisam ser inseridos.***
+	
+StringBuilder é mais eficiente do que fazer a concatenação em um return dos atributos do objeto.

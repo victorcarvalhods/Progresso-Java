@@ -1,0 +1,40 @@
+Laço for each: sintaxe opcional simplificada para percorrer coleções
+
+sintaxe:
+
+	for (Tipo apelido : coleção){
+		Bloco de comando
+	}
+	
+	
+
+Listas: Dados do mesmo tipo, elementos ordenados por posição, sempre inicia vazia
+
+Tipo:
+    Interface List, automaticamente n pode ser instanciado pelo tipo List.
+    
+Classes que implementam:
+    ArrayList, LinkedList, etc.
+    
+Desvantagens:
+    Acesso sequencial.
+    
+
+Alguns métodos:
+    Tamanho da lista: .size();
+    Insetir elemento na lista: .add(obj), add(int, obj);
+    remover da lista: .remove(obj), remove(in), removeIf(Predicate);
+    Encontrar posição do elemento: indexOf(obj), lastIndexOf(obj);
+    
+    filtrar lista com base em predicado:
+        List<Integer> result = list.stram().filter(x-> x >4).collect(Collectors.toList());
+        
+    Encontrar primeiro ocorrência com base em predicado:
+        Integer result = list.stream().filter(x -> x > 4).findFirst().orElse(null);
+    
+    Pegar objeto na posição:
+        .get(numero do indice)
+    
+Como declarar:
+    
+    List<WrapperCLass> nome_variavel = new ArrayList<>();

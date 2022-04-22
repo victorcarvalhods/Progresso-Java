@@ -1,0 +1,34 @@
+Enumerações:
+	Tipo especial que serve para especificar de forma literal
+	um conjunto de constantes relacionadas.
+	
+	Palavra chave: enum
+	
+	Vantagem: melhor semântica, código mais legível e auxilidado pelo compilador
+	
+	Conversão de string para enum:
+		nome_enum variável = nome_enum.valueOf("nome do estado");
+		
+
+		
+Design de Classes:
+	Por questão de design tais como organização, flexibilidade, reuso, delegação,
+	etc., há várias categorias de classes:
+		Views: Telas do sistema;
+		Controllers: controladores que fazem o intermédio entre as telas e o sistema;
+		Entities: Entidades de négocios, tais como, cliente, produto, pedidos e etc;
+		Services: serviços;
+		Repositories: objetos responsáveis por acessar banco de dados;
+
+Composição:
+	Permite que um objeto contenha outro objeto.
+	
+	Relação "tem um" ou "tem vários"
+	
+	Vantagens:
+		Organização;
+		Coesão;
+		Flexibilidade;
+		Reuso.
+	
+	Símbolo UML: diamante preto. Qualquer associação do tipo tem um e tem vários.

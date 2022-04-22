@@ -1,0 +1,72 @@
+Tipo de associação que permite que uma classe herde todos os dados e comportamento de outra
+
+vantagens:
+	Reuso
+	Polimorfismo
+	
+Sintaxe:
+	class A extends B
+	
+Desenho UML:
+	Classe filho apontando com uma ponta branca para a classe pai
+	
+	
+Modificador Protected:
+	é o modificador de acesso usado na classe mãe
+	para que os filhos tenham acesso aos atributos e métodos.
+	
+
+É uma relação "é um"
+
+Generalização/especialização
+
+superclasse/subclasse
+
+Herança/extensão
+
+Herança éuma associação entre classes(e não entre objetos)
+
+
+Upcasting e downcasting:
+	Upcasting: casting da subclasse para superclasse. Uso em polimorfismo
+		Não é necessário fazer o casting direto de tipos
+	
+	Downcasting: casting da superclase para subclasse. Palavra istanceof. 
+		Uso comum: métodos que recebem parâmetros genéricos (ex: equals).
+		
+		é necessário realizar o casting de tipos.
+		
+		Nem sempre acontece o downcasting. principalmente se forem classes irmãs
+		 com atributos adicionais distintos.
+		 
+		 instanceof:
+		 	Testa se um objeto é instancia de uma determianda classe.
+		 	
+Sobreposição:
+	É a implementação de um método de uma superclasse na subclasse.
+	
+	é fortemente recomendável usar a anotação @Overrrida em um método sobrescrito.
+		Facilita leitura e compreensão do código
+		Avisa ao compilador (boa prática)
+		
+		
+Palavra super:
+	Faz a chamada de um método implementado na superclasse .
+	
+	super.metodo();
+	
+	
+	
+Classes e métodos finais:
+	palavra chave: final.
+	
+	Classe: Evita que a classe seja herdade. Ex:
+		public final class NomeDaClasse
+	Método: evita que o método seja sobreposto
+	
+	Motivo de uso:
+		Segurança. Evita que classes ou métodos sejam sobrepostos.
+	
+	Final em métodos sobrepostos é bom para evitar inconsistências .
+	
+	Atributos de classe final são analisados mais rápidos em tempo de execução.

@@ -1,0 +1,35 @@
+Representa um INSTANTE. package: java.util
+
+
+Número de milissegundos desde meia noite do dia 1 de janeiro de 1970GM(utc)
+
+SimpleDateFormat:
+	Classe para formatação do objeto Data para String.
+		Ex:
+			dd/MM/yyyy -> 23/07/2018
+			dd/MM/yyyy HH:mm:ss -> 23/07/2018 15:42:07
+			
+	SimpleDateFormat é usado como padrão para formatação. Ou seja, ele não mostra a data
+	é apenas um molde para um objeto da classe Date. Pois, o padrão da classe date é:
+	"Dia_da_semana Mês Dia hora:minuto:segundo tempo_Uct ano"
+	
+	Metódo para alterar a zona do tempo de formatação:
+		.setTimeZone(TimeZone.getTimeZone("SIGLA DA TIME ZONE"))
+			
+Padrão ISO 8601
+	Formato: yyyy-MM--ddTHH:MM:ssZ
+	ex: "2018-06-25T15:42:07Z"
+	O Z no final define que o padrão de horário vai ser o da máquina, ou seja, para o Brasil é o tempo -3 horas.
+	
+
+Classe Instant:
+	Converte strings de datas no padrão iso para o padrão da classe Date.
+	
+	metodo: Date.from(Instante.parse("2018-06-25T15:42:07Z"));
+	
+	
+Construtores da classe Date:
+	new Date(): Cria o objeto com a data do sistema atual.
+	new Date(System.currentTimeMillis): Cria o objeto com a data atual do sistema. Porém, é obtido em milisegundos
+	new Date(Int valor): Define a data do objeto calculando a partir dos milisegundos inseridos.
+	

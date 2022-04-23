@@ -1,0 +1,9 @@
+Em POO, polimorfismo é o recurso que permite que variáveis de um mesmo tipo
+mais genérico possam apontar para objetos de tipos específicos diferentes, tendo assim
+comportamentos diferentes conforme cada tipo específico
+
+
+A associação do tipo específico com o tipo genério é feita em tempo de execução(upcasting)
+
+O compilador não sabe para qual tipo específico a chamada do método está sendo feita
+ (ele sabe apenas que são duas classe de uma variável mãe.)

@@ -3,6 +3,11 @@ package entities;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
+/*
+ * As intancias de produto usado tem data de fabricação.
+ * 
+ * */
 public class ProdutoUsado extends Produto{
 	
 	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
@@ -17,8 +22,8 @@ public class ProdutoUsado extends Produto{
 	public String etiquetaPreco() {
 		
 		StringBuilder sb = new StringBuilder();
-		sb.append(nome + "(usado) ");
-		sb.append(String.format("R$ %.2f", preco));
+		sb.append(getNome() + "(usado) ");
+		sb.append(String.format("R$ %.2f", getPreco()));
 		sb.append(" (Data de fabricação: )" + sdf.format(dataFabricacao));
 		
 		

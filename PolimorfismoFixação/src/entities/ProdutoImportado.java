@@ -1,5 +1,9 @@
 package entities;
 
+/*
+ * Diferente das instancias da classe Produto
+ * os produtos importados tem taxa de importação
+ * */
 public class ProdutoImportado extends Produto{
 	private Double custoImportacao;
 
@@ -17,13 +21,13 @@ public class ProdutoImportado extends Produto{
 	}
 	
 	public Double precoTotal() {
-		return preco + custoImportacao;
+		return getPreco() + custoImportacao;
 	}
 	
 	@Override
 	public String etiquetaPreco() {
 		
-		return String.format("%s R$ %.2f", nome, precoTotal());
+		return String.format("%s R$ %.2f (Taxa importação: R$ %.2f)", getNome(), precoTotal(), custoImportacao);
 		
 	}
 }

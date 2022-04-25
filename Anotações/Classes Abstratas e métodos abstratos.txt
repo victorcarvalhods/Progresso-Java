@@ -1,0 +1,20 @@
+Classes abstratas:
+	notação UML: nome da classe em itálico
+	Classes que não podem ser instanciadas.
+	
+	garente herança total:
+		Somente subclasses não abstratas podem ser instanciadas, 
+		mas nunca a classe mãe.
+	
+	palavra "abstract" na declaração da classe. Ex:
+		public abstract class ...{}
+		
+	Qual a utilidade de uma classe abstrata:
+		Reuso;
+		Polimorfismo: a classe mãe génerica nos permite tratas de forma
+		fácil e uniforma todos os tipos de conta, inclusive com polimorfismo se for o caso.
+		Ex: você pode colocar todos os tipos daquela classe em uma mesma coleção.
+	
+	
+	
+	

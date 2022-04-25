@@ -14,7 +14,20 @@ Classes abstratas:
 		Polimorfismo: a classe mãe génerica nos permite tratas de forma
 		fácil e uniforma todos os tipos de conta, inclusive com polimorfismo se for o caso.
 		Ex: você pode colocar todos os tipos daquela classe em uma mesma coleção.
+		
+
+Métodos abstratos:
+	notação UML: nome do método em itálico
 	
+	Métodos que não possuem implementação.
+	
+	Métodos precisam ser abstratos quando a classe
+	é genérica demais para conter sua implementação.
+	
+	Se uma classe possuir pelo menos um método abstrato, 
+	então a classe também é abstrata.
+	
+	métodos abstratos tem ; no lugar de {}
 	
 	
 	

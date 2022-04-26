@@ -1,0 +1,90 @@
+Uma exceção é uma condição de erro ou comportamento inesperado
+encontrado por um programa em execução.
+
+
+exceção éum objeto herdado da classe:
+	java.lang.Exception - obrigado a tratar ou propagar
+	||.RuntimeException - não é obrigado a tratar ou propagar
+	
+uma exceção é propagada na pilha de chamadas de métodos em execução, 
+até que seja capturada (tratada) ou o programa seja encerrado.
+
+
+hieraquia das exceções:
+	Throwable:
+		Error: Não vão ser corrigidos pelo compilados
+		
+			OuOfMemoryError: quando acaba a memória, o programa quebra e para.
+			
+			VirtualMachineError: quando o JVM tem algum erro.
+		
+		Exception:Podem ou não ser tratadas. Cabe escolha.
+		
+			IOException: Erro em entrada e saída
+			
+			RuntimeException: Exceções que o programa n obriga a tratar.
+				IndexOutOfBounds: acessar um index que não existe.
+				
+				NullPointerExcpetion: chamada de uma variável nula.
+				
+
+Permite que erros sejam tratados de forma consistente
+e flexível, usando boas práticas
+
+Vantagens: 
+	Delega a lógica do erro para a classe responsável por conhecer
+	as regras que podem ocasionar erro.
+	
+	Trata de forma organizada (inclusive hierárquica) exceções de tipos diferentes.
+	
+	
+	A exceção pode carregar dados quaisquer.
+	
+
+try-catch:
+	Bloco try:
+		contém o código que pode gerar uma exceção
+	Bloco catch:
+		Contém o código a ser executado caso uma exceção ocorra.
+		
+		Deve ser especificado o tipo de exceção a ser tratada (upcasting é permitido).
+		
+	Sintaxe:
+	
+		try {
+		}catch (ExceptionType e){
+		} ||| {
+		}||| {}
+		
+		
+		É permitido mais de um tipo de exceção
+		
+Bloco finally:
+	É um bloco que contém código a ser executado
+	 independentemente de ter ocorrido ou não uma exceção.
+	 
+	 Ex: fechar um arquivo, conexão de banco de dados, ou 
+	 outro recurso específico ao final do processamento
+	 
+
+	Sintaxe: try{
+		} catch (ExcepetionType e){
+		}finally{...}
+
+Model(mvc):
+	entities, enums, excepetion, services.
+
+Exceções personalizadas:
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+
+				

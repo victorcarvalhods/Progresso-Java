@@ -36,9 +36,9 @@ public class Programa {
 			Date agora = new Date();
 			
 			if (entrada.before(agora) || saida.before(agora)) {
-				System.out.println("erro");
+				System.out.println("Data de entrada ou saída devem ser em dias posteriores em relação a data atual");
 			}else if (!saida.after(entrada)) {
-				System.out.println("erro saida anbtes da entrada");
+				System.out.println("Data da saida está em uma data anterior a data de entrada.");
 			}else {
 				reserva.atualizarDatas(entrada, saida);
 				System.out.println("Reserva: " + reserva);

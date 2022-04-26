@@ -28,9 +28,20 @@ public class Reserva {
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 	}
 	
-	public void atualizarDatas(Date entrada, Date saida) {
-		this.entrada = entrada;
-		this.saida = saida;
+	public String atualizarDatas(Date entrada, Date saida) {
+		
+		Date agora = new Date();
+		
+		if (entrada.before(agora) || saida.before(agora)) {
+			return "Data de entrada ou saída devem ser em dias posteriores em relação a data atual";
+		}
+		if (!saida.after(entrada)) {
+			return "Data da saida está em uma data anterior a data de entrada.";
+		} else {
+			this.entrada = entrada;
+			this.saida = saida;
+			return null;
+		}
 	}
 
 	public Integer getNumeroQuarto() {

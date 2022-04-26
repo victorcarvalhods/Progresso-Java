@@ -5,6 +5,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
+import model.exceptions.DomainException;
+
 public class Reserva {
 	private Integer numeroQuarto;
 	private Date entrada;
@@ -16,7 +18,14 @@ public class Reserva {
 		
 	}
 
-	public Reserva(Integer numeroQuarto, Date entrada, Date saida) {
+	public Reserva(Integer numeroQuarto, Date entrada, Date saida){
+		Date agora = new Date();
+		if (!saida.after(entrada)) {
+			throw new DomainException("Data da saida está em uma data anterior a data de entrada.");
+		}
+		if (entrada.before(agora) || saida.before(agora)) {
+			throw new DomainException("Data de entrada ou saída devem ser em datas futuras");
+		}
 		this.numeroQuarto = numeroQuarto;
 		this.entrada = entrada;
 		this.saida = saida;
@@ -28,19 +37,18 @@ public class Reserva {
 		return TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
 	}
 	
-	public String atualizarDatas(Date entrada, Date saida) {
+	public void atualizarDatas(Date entrada, Date saida){
 		
 		Date agora = new Date();
 		
 		if (entrada.before(agora) || saida.before(agora)) {
-			return "Data de entrada ou saída devem ser em dias posteriores em relação a data atual";
+			throw new DomainException("Data de entrada ou saída devem ser em datas futuras");
 		}
 		if (!saida.after(entrada)) {
-			return "Data da saida está em uma data anterior a data de entrada.";
+			throw new DomainException("Data da saida está em uma data anterior a data de entrada.");
 		} else {
 			this.entrada = entrada;
 			this.saida = saida;
-			return null;
 		}
 	}
 

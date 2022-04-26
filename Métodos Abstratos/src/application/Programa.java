@@ -42,6 +42,8 @@ public class Programa {
 		for (Forma f: formas) {
 			System.out.printf("%.2f\n", f.area());
 		}
+		
+		sc.close();
 
 	}
 

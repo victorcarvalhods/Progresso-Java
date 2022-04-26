@@ -59,7 +59,7 @@ public class Reserva {
 	
 	@Override
 	public String toString() {
-		return "Quarto" + numeroQuarto 
+		return "Quarto " + numeroQuarto 
 				+ ", entrada: " 
 				+ sdf.format(entrada) 
 				+ ", saída: " 
